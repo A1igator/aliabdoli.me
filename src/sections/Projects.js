@@ -133,20 +133,46 @@ const Project = ({
               float: 'right',
             }}
           >
-            <Box mx={1} fontSize={5}>
-              <SocialLink
-                name="Check repository"
-                fontAwesomeIcon="github"
-                url={repositoryUrl}
-              />
-            </Box>
-            <Box mx={1} fontSize={5}>
-              <SocialLink
-                name="See project"
-                fontAwesomeIcon="globe"
-                url={projectUrl}
-              />
-            </Box>
+            {repositoryUrl !==
+              'https://play.google.com/store/apps/details?id=com.GenZ.TurtleZone&hl=en' && (
+              <Box mx={1} fontSize={5}>
+                <SocialLink
+                  name="Check repository"
+                  fontAwesomeIcon="github"
+                  url={repositoryUrl}
+                />
+              </Box>
+            )}
+            {projectUrl !==
+              'https://apps.apple.com/us/app/turtle-zone/id1448136933?app=itunes&ign-mpt=uo%3D4' && (
+              <Box mx={1} fontSize={5}>
+                <SocialLink
+                  name="See project"
+                  fontAwesomeIcon="globe"
+                  url={projectUrl}
+                />
+              </Box>
+            )}
+            {repositoryUrl ===
+              'https://play.google.com/store/apps/details?id=com.GenZ.TurtleZone&hl=en' && (
+              <Box mx={1} fontSize={5}>
+                <SocialLink
+                  name="See project"
+                  fontAwesomeIcon="play"
+                  url={repositoryUrl}
+                />
+              </Box>
+            )}
+            {projectUrl ===
+              'https://apps.apple.com/us/app/turtle-zone/id1448136933?app=itunes&ign-mpt=uo%3D4' && (
+              <Box mx={1} fontSize={5}>
+                <SocialLink
+                  name="See project"
+                  fontAwesomeIcon="apple"
+                  url={projectUrl}
+                />
+              </Box>
+            )}
           </Flex>
           <ImageSubtitle bg="primary" color="white" y="bottom" x="right" round>
             {type}
